@@ -1,5 +1,5 @@
-using Azure.Messaging.ServiceBus;
 using AgentDemo.Common;
+using Azure.Messaging.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;

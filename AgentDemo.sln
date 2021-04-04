@@ -9,6 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgentManager", "AgentManage
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgentRunner", "AgentRunner\AgentRunner.csproj", "{22BADA88-6039-4EC3-BF25-3625F06496AF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{7DA3617D-1947-43A2-B77A-C6FCDA22F4D5}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{B2FA157D-0F3E-4707-A92A-2C76D4CFD776}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +37,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A081D8A5-F823-4874-BE86-C772AAE27D9C} = {B2FA157D-0F3E-4707-A92A-2C76D4CFD776}
+		{54BAE381-C830-4196-AA2F-38410D16A44E} = {B2FA157D-0F3E-4707-A92A-2C76D4CFD776}
+		{22BADA88-6039-4EC3-BF25-3625F06496AF} = {B2FA157D-0F3E-4707-A92A-2C76D4CFD776}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB883FCF-B5C3-4E96-A9C5-E9741CA500A6}

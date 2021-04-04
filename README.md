@@ -1,21 +1,22 @@
 
 Hi!
 
-I'm looking for help in creating a service that that will be comprised of dozens of containerized AgentRunner instances, each hosting one or more agents (via plugins, although a detail omitted in this example) and deployed / managed via an AgentManager Function App using one or more HttpTriggers.  
+I'm looking for help in creating a service that that will encompass hundreds of containerized AgentRunner instances, each hosting one or more agents (via plugins, although a detail omitted in this example) and deployed / managed via an AgentManager Function App employing one or more HttpTriggers.  
 
-**DELIVERABLE**:
+**DELIVERABLES**:
 
 Add a **DeployAndConfigureInstance** function to the AgentManager that
 - Creates a new pod on an Azure Kubernetes Service (AKS) instance
 - Deploys a single Linux container to the new pod
-  - The containers will be kept in an Azure Container Repository instance
-  - Each container will have a single AgentRunner along with a particular "agent" plugin
+  - The containers will be kept in a single Azure Container Repository instance
+  - Each container will have a single AgentRunner running a single "agent" plugin
 - Each pod will have a replica count of 1
+  - There will be no need for auto-scaling, or even public endpoints
 - All Kubernetes interaction will be mediated by the Kubernetes C# API
   - https://github.com/kubernetes-client/csharp
   - Scripting via kubectl of otherwise may NOT be employed!!
-- Inline with the deployment process, each container will need to have a  collection of environment variables set
-  - These environment variables will be used by the AgentRunner app to connect to databases, APIs, etc.
+- Inline with the deployment process, each container will need to have a collection of environment variables set
+  - These environment variables will be used by the AgentRunner app to connect to databases, Service Bus, APIs, etc.
   
 Add a **DeleteInstance** function to AgentManager that
 - Deletes an existing pod and container, but only after a graceful shutdown of the AgentRunner via an Azure Service Bus "Stop" message

@@ -1,5 +1,4 @@
-
-Hi!
+Dear Freelancer:
 
 I'm looking for help in creating a service that that will encompass hundreds of containerized AgentRunner instances, each hosting one or more agents (via plugins, although a detail omitted in this example) and deployed / managed via an AgentManager Function App employing one or more HttpTriggers.  
 

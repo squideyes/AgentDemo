@@ -38,6 +38,21 @@ Create a "Settings.env" file in the AgentRunner folder, with the following Key=V
 
 You'll also need to create an Azure Service Bus topic and subscription that matches the above values.  Once configured, launch the AgentRunner and AgentManager then post messages via REST to the AgentManager "Manager" method (at http://localhost:7071/api/Manager) to send commands to individual AgentRunner instances, via the AgentManager's Manager function; to Pause, Resume, Stop and Configure the service.
 
+To interact with the AgentManager FunctionApp, use Postman to issue commands similar to the following:
+
+```json
+{
+    "Kind": "Resume",
+    "TraderId": "AAAA",
+    "AccountId": 1,
+    "Settings":{
+        "Delay":"1000"
+    }
+}
+```
+
+The possible command "Kind" values are Stop, Pause, Resume and "Configure".  The Settings dictionary will only be used if Kind is "Configure"
+
 When quoting a price for the above work, please make provision for a quick kick-off meeting, via Zoom, to make sure we're both on the same page.
 
 Looking forward to hearing from you...
